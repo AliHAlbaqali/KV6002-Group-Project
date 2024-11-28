@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#cellContainer {
+    text-align: center;
+}
+
+#backgroundContainer {
+    position: relative;
+    width: 80vw;
+    height: 60vh;
+    margin: 0 auto;
+}
+
+#backgroundImage {
+    width: 100%;
+    height: auto;
+    transition: transform 1s ease;
+}
+
+.panel {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    border: 2px solid #888;
+    cursor: pointer;
+    text-align: center;
+    width: 150px;
+    transition: opacity 0.3s ease;
+}
+
+.wiresOverlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    text-align: center;
+    overflow: hidden;
+}
+
+.wiresImage {
+    max-width: 90%;
+    max-height: 80%;
+    cursor: pointer;
+    position: relative;
+}
+
+.wire {
+    position: absolute;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid white;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.wire:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Position the wires at different places on the screen */
+#wire1 {
+    top: 20%;
+    left: 10%;
+}
+
+#wire2 {
+    top: 35%;
+    left: 35%;
+}
+
+#wire3 {
+    top: 50%;
+    left: 60%;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: lightgreen;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: red;
+}

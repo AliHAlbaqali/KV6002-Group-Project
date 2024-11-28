@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prison Cell Escape</title>
+    <link rel="stylesheet" href="prison.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <div id="cellContainer">
+        <h1>Prison Cell - Escape Challenge</h1>
+        <p>Click the panel to open it and reveal the wires. Find and cut the power wire to escape!</p>
+
+        <!-- Background Image of the prison cell -->
+        <div id="backgroundContainer">
+            <img src="prison1.jfif" alt="Prison Cell" id="backgroundImage">
+        </div>
+
+        <!-- Panel in front of the player -->
+        <div id="panel" class="panel" onclick="openPanel()">
+            <p>Click to open the panel</p>
+        </div>
+
+        <!-- Full screen wires overlay (hidden initially) -->
+        <div id="wiresOverlay" class="wiresOverlay" style="display: none;" onclick="closeOverlay()">
+            <img src="wires.jfif" alt="Wires" class="wiresImage">
+
+            <!-- Wires inside the image -->
+            <div class="wire" id="wire1" onclick="cutWire('wire1')">
+                <p>Wire 1 (Red)</p>
+            </div>
+            <div class="wire" id="wire2" onclick="cutWire('wire2')">
+                <p>Wire 2 (Blue)</p>
+            </div>
+            <div class="wire" id="wire3" onclick="cutWire('wire3')">
+                <p>Wire 3 (Green) - Power</p> <!-- This is the power wire -->
+            </div>
+        </div>
+
+        <!-- Message to show puzzle status -->
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="prison.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Escape</title>
+    <link rel="stylesheet" href="space.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            background: black url('RQ03IX.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 20px;
+        }
+        #startButton {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            color: white;
+            background-color: #1a73e8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        #startButton:hover {
+            background-color: #155bb5;
+            transform: scale(1.1);
+        }
+        #credits {
+            font-size: 0.9rem;
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Space Escape!</h1>
+        <p>
+            You wake up stranded in a spaceship with no memory of how you got there. 
+            Solve puzzles, unlock doors, and make your way to the escape pod to survive!
+        </p>
+        <button id="startButton" onclick="startGame()">Start Game</button>
+        <div id="credits">
+            <p>Created by KW5</p>
+        </div>
+    </div>
+    <script>
+        function startGame() {
+            window.location.href = "background-info.html"; // Link to your background information page
+        }
+    </script>
+</body>
+</html>
