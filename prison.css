@@ -1,108 +1,167 @@
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #111;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-}
-
-#cellContainer {
-    text-align: center;
-}
-
-#backgroundContainer {
-    position: relative;
-    width: 80vw;
-    height: 60vh;
-    margin: 0 auto;
-}
-
-#backgroundImage {
-    width: 100%;
-    height: auto;
-    transition: transform 1s ease;
-}
-
-.panel {
-    position: absolute;
-    right: 20px;
-    bottom: 30px;
-    background-color: #444;
-    color: white;
-    padding: 20px;
-    border: 2px solid #888;
-    cursor: pointer;
-    text-align: center;
-    width: 150px;
-    transition: opacity 0.3s ease;
-}
-
-.wiresOverlay {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    text-align: center;
     overflow: hidden;
 }
 
-.wiresImage {
-    max-width: 90%;
-    max-height: 80%;
-    cursor: pointer;
+/* Main container for the game */
+#gameContainer {
     position: relative;
+    width: 60%;
+    height: 80%;
+    border: 3px solid #555; /* Preserves the border */
+    border-radius: 10px;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
 }
 
-.wire {
+/* Timer in the top-left corner */
+#timer {
     position: absolute;
-    cursor: pointer;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: 1px solid white;
-    transition: background-color 0.3s ease;
-    padding: 10px;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.wire:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-/* Position the wires at different places on the screen */
-#wire1 {
-    top: 20%;
-    left: 10%;
-}
-
-#wire2 {
-    top: 35%;
-    left: 35%;
-}
-
-#wire3 {
-    top: 50%;
-    left: 60%;
-}
-
-.message {
-    margin-top: 20px;
+    top: 10px;
+    left: 15px;
     font-size: 1.2rem;
     color: lightgreen;
 }
 
-#message {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    color: red;
+/* Home button styling */
+#homeButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #ff4c4c; /* Red color for visibility */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 15; /* Ensure it appears above other elements */
+    transition: background-color 0.3s ease;
 }
+
+/* Hover effect for Home button */
+#homeButton:hover {
+    background-color: #ff0000; /* Brighter red for hover */
+}
+
+
+/* Game Area */
+#gameArea {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Prison cell image */
+#gameImage {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+/* Invisible button for the panel */
+#panelButton {
+    position: absolute;
+    top: 40%; /* Adjust to align with the panel */
+    left: 70%; /* Adjust to align with the panel */
+    width: 100px; /* Size to cover the panel */
+    height: 100px; /* Size to cover the panel */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Invisible button on the left */
+#leftButton {
+    position: absolute;
+    left: 20%; /* Adjust based on your image layout */
+    top: 50%; /* Center vertically */
+    width: 50px; /* Button size */
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* Ensure it's clickable */
+}
+
+/* Hide images initially */
+#hiddenImage, #anotherImage {
+    display: none;
+}
+
+/* Styling for close button */
+#closeButton {
+    position: absolute;
+    top: 10%;
+    right: 3%;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 20; /* Ensure it's above all images */
+    display: none; /* Hidden initially */
+}
+
+
+/* Optional hover effect for the close button */
+#closeButton:hover {
+    background-color: darkred;
+}
+
+/* Hidden image styles */
+#anotherImage {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+    border: 3px solid #555; /* Optional border for clarity */
+    border-radius: 5px;
+    z-index: 15; /* Ensure it's above other elements */
+}
+
+/* Level description */
+#levelDescription {
+    padding: 10px;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 2px solid #555;
+}
+
+/* Hidden image styles */
+#hiddenImage {
+    display: none; /* Start hidden */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+    border: 3px solid #555; /* Optional for visual clarity */
+    border-radius: 5px;
+    z-index: 10; /* Ensure it appears above other content */
+}
+

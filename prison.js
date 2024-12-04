@@ -1,24 +1,50 @@
-// Function to open the panel and reveal the wires overlay
+// Function to open the wires panel (reveal image)
 function openPanel() {
-    // Hide the panel and show the wires overlay
-    document.getElementById('panel').style.display = 'none';
-    document.getElementById('wiresOverlay').style.display = 'flex';
+    const hiddenImage = document.getElementById('hiddenImage');
+    const closeButton = document.getElementById('closeButton');
+    
+    // Show hidden image and close button
+    hiddenImage.style.display = 'block';
+    closeButton.style.display = 'block'; // Make close button visible
 }
 
-// Function to close the wires overlay if user clicks outside the wires area
-function closeOverlay() {
-    document.getElementById('wiresOverlay').style.display = 'none';
+// Function to show another image (reveal image)
+function showAnotherImage() {
+    const anotherImage = document.getElementById('anotherImage');
+    const closeButton = document.getElementById('closeButton');
+    
+    // Show another image and close button
+    anotherImage.style.display = 'block';
+    closeButton.style.display = 'block'; // Make close button visible
 }
 
-// Function to handle wire cutting
-function cutWire(wireId) {
-    if (wireId === 'wire3') {
-        // Correct wire (power wire)
-        document.getElementById('message').textContent = 'Laser Gate Opened! You can now escape!';
-        document.getElementById('message').style.color = 'lightgreen';
+// Function to close the images (hide images and close button)
+function closeImage() {
+    const hiddenImage = document.getElementById('hiddenImage');
+    const anotherImage = document.getElementById('anotherImage');
+    const closeButton = document.getElementById('closeButton');
+    
+    // Hide both images and close button
+    hiddenImage.style.display = 'none';
+    anotherImage.style.display = 'none';
+    closeButton.style.display = 'none'; // Hide close button
+}
+
+
+
+function cutWire(color) {
+    if (color === "blue") {
+        alert("Correct wire cut! Laser gate disabled.");
     } else {
-        // Incorrect wire
-        document.getElementById('message').textContent = 'Incorrect wire. Try again!';
-        document.getElementById('message').style.color = 'red';
+        alert("Wrong wire! Try again.");
     }
 }
+
+function goHome() {
+    const confirmExit = confirm("Are you sure you want to exit to the home page? Any unsaved progress will be lost.");
+    if (confirmExit) {
+        window.location.href = "home.html"; // Redirect to the home page
+    }
+}
+
+
