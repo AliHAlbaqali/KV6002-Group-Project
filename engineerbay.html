@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prison Cell Escape</title>
+    <link rel="stylesheet" href="prison.css">
+</head>
+
+<body>
+    <div id="gameContainer">
+        <!-- Timer in the top-left corner -->
+        <div id="timer">Time: 00:00</div>
+
+        <!-- Exit/Home button -->
+        <button id="homeButton" onclick="goHome()">Home</button>
+        
+
+    <!-- Game Content -->
+    <div id="gameArea">
+        <img src="engineerbay.jpg" alt="engineering bay" id="gameImage">
+
+        <!-- Invisible buttons -->
+        <button id="panelButton" onclick="openPanel()"></button>
+        
+
+        <!-- Hidden images -->
+        <img src="simonsays.jpg" alt="simon says Panel" id="hiddenImage">
+        
+
+        <!-- Close button -->
+        <button id="closeButton" onclick="closeImage()">Close</button>
+    </div>
+
+        <!-- Level Description -->
+        <div id="levelDescription">
+            <p>You've reached the Engineering Bay, but it's running on backup power! Restore the main power to proceed.</p>
+        </div>
+    </div>
+
+    <script src="prison.js"></script>
+</body>
+</html>
