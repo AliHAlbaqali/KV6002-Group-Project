@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="information.css">
+</head>
+<body>
+    <div class="container">
+        <div class="button-group">
+            <button onclick="showInfo(1)">Hints</button>
+            <button onclick="showInfo(2)">Timer</button>
+            <button onclick="showInfo(3)">Leaderboard</button>
+            <button onclick="showInfo(4)">Puzzles</button>
+        </div>
+        <div id="info1" class="info-container">
+            <p>Information for Button 1</p>
+        </div>
+        <div id="info2" class="info-container">
+            <p>Information for Button 2</p>
+        </div>
+        <div id="info3" class="info-container">
+            <p>Information for Button 3</p>
+        </div>
+        <div id="info4" class="info-container">
+            <p>Information for Button 4</p>
+        </div>
+        <button id="startButton">Space to Play!</button>
+    </div>
+    <script>
+        function showInfo(buttonNumber) {
+            document.querySelectorAll('.info-container').forEach(container => {
+                container.classList.remove('active');
+            });
+
+            document.getElementById(`info${buttonNumber}`).classList.add('active');
+        }
+        
+            document.addEventListener("keydown", function(event) {
+        if (event.code === "Space") { 
+            event.preventDefault(); 
+            window.location.href = "prison.html"; 
+        }
+        });
+
+    </script>
+</body>
+</html>
