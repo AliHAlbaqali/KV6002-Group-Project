@@ -16,6 +16,7 @@ body {
     position: relative;
     width: 60%;
     height: 80%;
+    max-width: 800px; /* Or any suitable value */
     border: 3px solid #555; /* Preserves the border */
     border-radius: 10px;
     background-color: #222;
@@ -86,19 +87,77 @@ body {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    border: 1px solid red; /* Remove after alignment */
+}
+
+.wireButton {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 20; /* Ensure it's on top of the wire image */
+    border: 1px solid red; /* Remove after alignment */
+}
+
+/* Positioning for individual wires */
+#wireBlue {
+    top: 42%; /* Adjust to align with the red wire */
+    left: 49.5%; /* Adjust based on the wire location */
+    width: 10px;
+    height: 200px;
+}
+
+#wireRed {
+    top: 42%; /* Adjust to align with the blue wire */
+    left: 46.5%; /* Adjust based on the wire location */
+    width: 10px;
+    height: 200px;
+}
+
+#wireYellow {
+    top: 42%; /* Adjust to align with the Yellow wire */
+    left: 53%; /* Adjust based on the wire location */
+    width: 10px;
+    height: 200px;
+}
+
+/* Door button */
+#doorButton {
+    position: absolute;
+    top: 36%; /* Adjust position as needed */
+    left: 40%; /* Adjust position as needed */
+    width: 135px;
+    height: 170px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    z-index: 10; /* Ensure it's clickable */
+    border: 1px solid red; /* Remove after alignment */
+}
+
+/* Door locked message styling */
+#doorButton:disabled {
+    background-color: gray;
+    cursor: not-allowed;
 }
 
 /* Invisible button on the left */
 #leftButton {
     position: absolute;
-    left: 20%; /* Adjust based on your image layout */
+    left: 11%; /* Adjust based on your image layout */
     top: 50%; /* Center vertically */
-    width: 50px; /* Button size */
+    width: 65px; /* Button size */
     height: 50px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     z-index: 10; /* Ensure it's clickable */
+    border: 1px solid red; /* Remove after alignment */
 }
 
 /* Hide images initially */
@@ -109,8 +168,8 @@ body {
 /* Styling for close button */
 #closeButton {
     position: absolute;
-    top: 10%;
-    right: 3%;
+    top: 2%;
+    right: 16%;
     background-color: red;
     color: white;
     border: none;
@@ -164,4 +223,6 @@ body {
     border-radius: 5px;
     z-index: 10; /* Ensure it appears above other content */
 }
+
+
 

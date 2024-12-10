@@ -23,10 +23,17 @@
         <!-- Invisible buttons -->
         <button id="panelButton" onclick="openPanel()"></button>
         <button id="leftButton" onclick="showAnotherImage()"></button>
+        <button id="doorButton" onclick="checkDoor()"></button> <!-- New Door Button -->
 
         <!-- Hidden images -->
-        <img src="wires.jpg" alt="Wires Panel" id="hiddenImage">
-        <img src="new-image.jpg" alt="Another View" id="anotherImage">
+        <img src="wires2.jpg" alt="Wires Panel" id="hiddenImage">
+        <img src="wall1.jpg" alt="Another View" id="anotherImage">
+
+       <!-- Wire Buttons -->
+        <button id="wireBlue" class="wireButton" onclick="cutWire('blue')"></button>
+        <button id="wireRed" class="wireButton" onclick="cutWire('red')"></button>
+        <button id="wireYellow" class="wireButton" onclick="cutWire('yellow')"></button>
+
 
         <!-- Close button -->
         <button id="closeButton" onclick="closeImage()">Close</button>
