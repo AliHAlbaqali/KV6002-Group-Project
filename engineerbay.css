@@ -28,7 +28,7 @@ body {
 }
 
 /* Timer in the top-left corner */
-#timerDisplay {
+#timer {
     position: absolute;
     top: 10px;
     left: 15px;
@@ -36,38 +36,6 @@ body {
     color: lightgreen;
 }
 
-#hintPopup {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border: 2px solid black;
-    border-radius: 10px;
-    z-index: 1000;
-    text-align: center;
-}
-
-#hintText {
-    font-size: 16px;
-    color: black; /* Ensure the text color is visible */
-    margin-bottom: 20px;
-}
-
-#closeHint {
-    background: #555;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#closeHint:hover {
-    background: #333;
-}
 /* Home button styling */
 #homeButton {
     position: absolute;
@@ -92,14 +60,13 @@ body {
 
 
 /* Game Area */
-#gameArea {
-    position: relative;
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    overflow: hidden;
+#gameImage {
+    max-width: 100%; /* Keeps image width within the container */
+    max-height: 100%; /* Keeps image height within the container */
+    width: auto; /* Ensures aspect ratio is maintained */
+    height: auto; /* Ensures aspect ratio is maintained */
+    border-radius: 5px;
+    object-fit: contain; /* Ensures the image fits nicely without distortion */
 }
 
 /* Prison cell image */
@@ -110,7 +77,7 @@ body {
 }
 
 /* Invisible button for the panel */
-#panelButton {
+#simonButton {
     position: absolute;
     top: 40%; /* Adjust to align with the panel */
     left: 70%; /* Adjust to align with the panel */
@@ -120,38 +87,6 @@ body {
     border: none;
     cursor: pointer;
     border: 1px solid red; /* Remove after alignment */
-}
-
-.wireButton {
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: none; /* Hidden by default */
-    z-index: 20; /* Ensure it's on top of the wire image */
-    border: 1px solid red; /* Remove after alignment */
-}
-
-/* Positioning for individual wires */
-#wireBlue {
-    top: 42%; /* Adjust to align with the red wire */
-    left: 49.5%; /* Adjust based on the wire location */
-    width: 10px;
-    height: 200px;
-}
-
-#wireRed {
-    top: 42%; /* Adjust to align with the blue wire */
-    left: 46.5%; /* Adjust based on the wire location */
-    width: 10px;
-    height: 200px;
-}
-
-#wireYellow {
-    top: 42%; /* Adjust to align with the Yellow wire */
-    left: 53%; /* Adjust based on the wire location */
-    width: 10px;
-    height: 200px;
 }
 
 /* Door button */
@@ -193,7 +128,7 @@ body {
 }
 
 /* Hide images initially */
-#hiddenImage, #anotherImage {
+#simonSays, #anotherImage {
     display: none;
 }
 
@@ -243,7 +178,7 @@ body {
 }
 
 /* Hidden image styles */
-#hiddenImage {
+#simonSays {
     display: none; /* Start hidden */
     position: absolute;
     top: 50%; /* Center vertically */

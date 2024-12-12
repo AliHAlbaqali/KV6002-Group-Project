@@ -10,12 +10,15 @@
 <body>
     <div id="gameContainer">
         <!-- Timer in the top-left corner -->
-        <div id="timer">Time: 00:00</div>
+        <div id="timer">Time Remaining: <span id="time"></span></div>
 
         <!-- Exit/Home button -->
         <button id="homeButton" onclick="goHome()">Home</button>
-        
-
+        <button id="hintButton">Get Hint</button>
+        <div id="hintPopup">
+            <p id="hintText"></p>
+            <button id="closeHint">Close</button>
+        </div>
         <!-- Game Content -->
     <div id="gameArea">
         <img src="prison1.jpg" alt="Prison Cell" id="gameImage">
@@ -46,5 +49,6 @@
     </div>
 
     <script src="prison.js"></script>
+    <script src="gamelogic.js"></script>
 </body>
 </html>

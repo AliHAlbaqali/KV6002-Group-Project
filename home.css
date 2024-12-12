@@ -48,12 +48,12 @@ p {
 
 #spaceship {
     position: absolute;
-    bottom: -100px; /* Initially off-screen */
+    bottom: -100px; 
     left: 50%;
     transform: translateX(-50%);
     width: 50px;
     height: 100px;
-    background: url('spaceship2.png') no-repeat center/contain; /* Replace with your spaceship image */
+    background: url('spaceship2.png') no-repeat center/contain; 
     visibility: hidden;
 }
 
