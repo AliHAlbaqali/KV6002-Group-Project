@@ -1,0 +1,232 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Main container for the game */
+#gameContainer {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    max-width: 1000px;
+    border: 3px solid #555;
+    border-radius: 10px;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Timer in the top-left corner */
+#timer {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 1.2rem;
+    color: lightgreen;
+}
+
+/* Main Game Area */
+#gameArea {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image of the escape pod (Landscape) */
+#gameImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Clickable area (for triggering input box) */
+#inputArea {
+    position: absolute;
+    top: 38%;
+    left: 40%;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 0, 0, 0); /* Semi-transparent red */
+    border-radius: 10px;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+/* Existing Input Box Popup */
+#inputBox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%; /* Centered vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    border: 3px solid #555;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    z-index: 100; /* Make sure it's above other content */
+}
+
+
+#inputArea2 {
+    position: absolute;
+    top: 42%;
+    left: 22%;
+    width: 50px;
+    height: 100px;
+    background-color: rgba(255, 0, 0, 0); /* Semi-transparent red */
+    border-radius: 10px;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+/* New Empty Input Box Popup (Identical but Empty) */
+#inputBox2 {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%; /* Position it below the first one */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    border: 3px solid #555;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    z-index: 101; /* Ensure it's above other content */
+    
+}
+
+#inputArea3 {
+    position: absolute;
+    top: 42%;
+    left: 74%;
+    width: 50px;
+    height: 100px;
+    background-color: rgba(255, 0, 0, 0); /* Semi-transparent red */
+    border-radius: 10px;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#inputBox3 {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%; /* Position it below the first one */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    border: 3px solid #555;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    z-index: 101; /* Ensure it's above other content */
+    
+}
+
+
+#inputBoxImage {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* Digit box styling - Centering */
+#digitContainer {
+    display: flex;
+    justify-content: center; /* Centering digits horizontally */
+    align-items: center; /* Centering digits vertically */
+    gap: 20px; /* Adding space between digits */
+    margin-top: -60px; /* Adjusting to position above the bottom of the image */
+}
+
+.digit {
+    background-color: #444;
+    color: white;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.digit img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;    
+}
+
+.digit:hover {
+    background-color: #666;
+}
+
+/* Check Code Button */
+#checkCodeButton {
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkCodeButton:hover {
+    background-color: #45a049;
+}
+
+/* Close Button */
+#closeButton {
+    margin-top: 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#closeButton:hover {
+    background-color: darkred;
+}
+
+/* Home button */
+#homeButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 15;
+}
+
+#homeButton:hover {
+    background-color: #ff0000;
+}
+

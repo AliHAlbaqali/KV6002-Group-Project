@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Pod</title>
+    <link rel="stylesheet" href="escapePod.css">
+</head>
+
+<body>
+    <div id="gameContainer">
+        <!-- Timer and Home button -->
+        <div id="timer">Time Remaining: <span id="time"></span></div>
+        <button id="homeButton" onclick="goHome()">Home</button>
+
+        <!-- Main Game Area (Landscape View) -->
+        <div id="gameArea">
+            <img src="escape pod room.png" alt="Escape Pod Room" id="gameImage">
+
+            <!-- Clickable Area on the Escape Pod -->
+            <div id="inputArea" onclick="openInputBox()"></div> <!-- This section will open the input box -->
+            <div id="inputArea2" onclick="openInputBox2()"></div> <!-- This section will open the input box -->
+            <div id="inputArea3" onclick="openInputBox3()"></div> <!-- This section will open the input box -->
+
+            
+        </div>
+    </div>
+
+    <!-- Input Box Popup (Hidden Initially) -->
+    <div id="inputBox">
+        <img src="escape pod star chart.png" alt="Code Puzzle Image" id="inputBoxImage">
+        <div id="digitContainer">
+            <!-- 5 digit display sections -->
+            <div class="digit" id="digit1" onclick="cycleSymbol('digit1')"><img src="symbol1.png" alt="Symbol 1"></div>
+            <div class="digit" id="digit2" onclick="cycleSymbol('digit2')"><img src="symbol1.png" alt="Symbol 1"></div>
+            <div class="digit" id="digit3" onclick="cycleSymbol('digit3')"><img src="symbol1.png" alt="Symbol 1"></div>
+            <div class="digit" id="digit4" onclick="cycleSymbol('digit4')"><img src="symbol1.png" alt="Symbol 1"></div>
+            <div class="digit" id="digit5" onclick="cycleSymbol('digit5')"><img src="symbol1.png" alt="Symbol 1"></div>
+        </div>
+        <button id="checkCodeButton" onclick="checkCode()">Check Code</button>
+        <button id="closeButton" onclick="closeInputBox()">Close</button>
+    </div>
+
+
+    <div id="inputBox2">
+        <div id="digitContainer">
+        <div class="digit" id="digit1"><img src="symbol1.png" alt="Symbol 1"></div>
+        <div class="digit" id="digit2"><img src="symbol2.png" alt="Symbol 2"></div>
+
+            <button id="closeButton" onclick="closeInputBox2()">Close</button>
+        </div>
+    </div>
+
+    <div id="inputBox3">
+        <div id="digitContainer">
+        <div class="digit" id="digit3" ><img src="symbol3.png" alt="Symbol 3"></div>
+        <div class="digit" id="digit4" ><img src="symbol1.png" alt="Symbol 1"></div>
+        <div class="digit" id="digit5" ><img src="symbol2.png" alt="Symbol 2"></div>
+
+            <button id="closeButton" onclick="closeInputBox3()">Close</button>
+        </div>
+    </div>
+
+
+    <script src="escapePod.js"></script>
+</body>
+</html>
