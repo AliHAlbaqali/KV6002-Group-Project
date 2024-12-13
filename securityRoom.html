@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prison Cell Escape</title>
+    <link rel="stylesheet" href="securityRoom.css">
+</head>
+
+<body>
+    <div id="gameContainer">
+
+        <div id="timer">Time Remaining: <span id="time"></span></div>
+
+        <button id="homeButton" onclick="goHome()">Home</button>
+        <button id="hintButton">Get Hint</button>
+        <div id="hintPopup">
+            <p id="hintText"></p>
+            <button id="closeHint">Close</button>
+        </div>
+
+    <div id="gameArea">
+        <img src="security.png" alt="Security Room" id="gameImage">
+
+        <div id="codeInputSection" style="display: none;">
+            <input type="text" id="codeInput" maxlength="4" placeholder="Enter 4-digit code">
+            <button id="submitCodeButton" onclick="submitCode()">Submit</button>
+        </div>
+        
+        <button id="cameraButton" onclick="openCamera()"></button>
+        <button id="drawerButton" onclick="showAnotherImage()"></button>
+        <button id="doorButton" onclick="checkDoor()"></button> 
+        <button id="paper" onclick="showClue()"></button>
+        <button id="closeClueButton" onclick="closeClue()" style="display: none;">Close Clue</button>
+
+
+        <button id="prevCamera" style="display: none;" onclick="changeCamera('prev')">Previous</button>
+        <button id="nextCamera" style="display: none;" onclick="changeCamera('next')">Next</button>
+
+
+        <img src="storage.png" alt="Camera: Storage" id="cameraImage">
+        <img src="meeting.png" alt="Camera: Meeting" id="meeting">
+        <img src="bar.png" alt="Camera: Bar" id="bar">
+        <img src="clue.png" alt = "A clue shown on camera" id="clueImage" style="display: none;">
+
+        <button id="closeButton" onclick="closeImage()">Close</button>
+    </div>
+
+
+        <div id="levelDescription">
+            <p>You're at the security room! The door locks behind you! You have to find a way out!</p>
+        </div>
+    </div>
+
+    <script src="securityRoom.js"></script>
+    <script src="gamelogic.js"></script>
+</body>
+</html>
