@@ -23,8 +23,21 @@
         <!-- Invisible buttons -->
         <button id="simonButton" onclick="openPanel()"></button>
         
+        <!-- Cipher -->
+        <button id="simonButtonCipher" onclick="openPanelCipher()"></button>
+        <img src="cipherButton.jpeg" alt="New Box Content" id="simonButtonCipherImage" style="z-index:30;">
+        <button id="simonButtonCipherClose" onclick="closePanelCipher()">Close</button>
+        
         <!-- Hidden images -->
-        <img src="simonSays.jpg" alt="simon says Panel" id="simonSays">
+        <img src="simonSays.jpg" alt="Simon Says Panel" id="simonSays">
+
+        <!-- Simon Says Buttons -->
+        <div id="simonButtons" class="simonButtonsHide">
+            <button class="simonButton" id="redButton" onclick="handleSimonButtonClick('red')"></button>
+            <button class="simonButton" id="greenButton" onclick="handleSimonButtonClick('green')"></button>
+            <button class="simonButton" id="blueButton" onclick="handleSimonButtonClick('blue')"></button>
+            <button class="simonButton" id="yellowButton" onclick="handleSimonButtonClick('yellow')"></button>
+        </div>
         
         <!-- Close button -->
         <button id="closeButton" onclick="closeImage()">Close</button>
@@ -37,7 +50,8 @@
             <p>You've reached the Engineering Bay, but it's running on backup power! Restore the main power to proceed.</p>
         </div>
     </div>
-    <script src="timer.js"></script>
+
+    <script src="gamelogic.js"></script>
     <script src="engineerbay.js"></script>
 </body>
 </html>

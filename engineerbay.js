@@ -1,64 +1,112 @@
+let puzzleSequence = []; // To track the player's input sequence
+const correctPattern = ["red", "red", "green", "red", "blue", "blue"]; // Correct sequence
+let isPuzzleSolved = false; // Track if the puzzle is solved
+
+// Function to handle Simon Says panel opening
 function openPanel() {
-    const simonSays = document.getElementById('simonSays');
-    const closeButton = document.getElementById('closeButton');
-    const doorButton = document.getElementById('doorButton');
+    const simonSays = document.getElementById("simonSays");
+    const closeButton = document.getElementById("closeButton");
+    const simonButtons = document.getElementById("simonButtons");
 
-    // Show hidden image and close button
-    simonSays.style.display = 'block';
-    closeButton.style.display = 'block';
+    // Show Simon Says panel and close button
+    simonSays.style.display = "block";
+    closeButton.style.display = "block";
 
-    if (doorButton) 
-        { 
-            doorButton.style.display = 'none'; doorButton.disabled = true; 
+    // Show Simon Says buttons
+    simonButtons.classList.remove("simonButtonsHide");
+
+    // Reset the sequence if the puzzle is reopened
+    puzzleSequence = [];
+}
+
+// Function to handle button clicks on the Simon Says panel
+function handleSimonButtonClick(color) {
+    puzzleSequence.push(color); // Add the clicked color to the sequence
+    console.log(`Player clicked: ${color}, Current sequence: ${puzzleSequence.join(", ")}`);
+
+    // Check the player's sequence against the correct pattern
+    if (puzzleSequence.length <= correctPattern.length) {
+        // Compare each input with the correct pattern
+        for (let i = 0; i < puzzleSequence.length; i++) {
+            if (puzzleSequence[i] !== correctPattern[i]) {
+                alert("Incorrect sequence! Try again.");
+                puzzleSequence = []; // Reset the sequence
+                return;
+            }
         }
+
+        // If the full sequence matches, solve the puzzle
+        if (puzzleSequence.length === correctPattern.length) {
+            // Show Simon Says buttons
+            simonButtons.classList.add("simonButtonsHide");
+            solvePuzzle();
+        }
+    }
 }
 
-function showAnotherImage() {
-    const anotherImage = document.getElementById('anotherImage');
-    const closeButton = document.getElementById('closeButton');
+// Function to open the new box and show the image
+function openPanelCipher() {
+    const newBoxImage = document.getElementById("simonButtonCipherImage");
+    const newBoxCloseButton = document.getElementById("simonButtonCipherClose");
 
-    // Show another image and close button
-    anotherImage.style.display = 'block';
-    closeButton.style.display = 'block';
-
+    // Show the image and close button
+    newBoxImage.style.display = "block";
+    newBoxCloseButton.style.display = "block";
 }
 
+// Function to close the new box
+function closePanelCipher() {
+    const newBoxImage = document.getElementById("simonButtonCipherImage");
+    const newBoxCloseButton = document.getElementById("simonButtonCipherClose");
+
+    // Hide the image and close button
+    newBoxImage.style.display = "none";
+    newBoxCloseButton.style.display = "none";
+}
+
+// Function to solve the Simon Says puzzle
+function solvePuzzle() {
+    alert("Congratulations! You solved the puzzle. Power is restored.");
+    isPuzzleSolved = true;
+
+    // Enable the door button
+    const doorButton = document.getElementById("doorButton");
+    if (doorButton) {
+        doorButton.disabled = false;
+    }
+
+    // Close the puzzle panel
+    // Show Simon Says buttons
+    simonButtons.classList.add("simonButtonsHide");
+    closeImage();
+}
+
+// Function to close any open images or puzzles
 function closeImage() {
-    const simonSays = document.getElementById('simonSays');
-    const anotherImage = document.getElementById('anotherImage');
-    const closeButton = document.getElementById('closeButton');
-    if (simonSays) {
-        simonSays.style.display = 'none';
+    const simonSays = document.getElementById("simonSays");
+    const closeButton = document.getElementById("closeButton");
+    const simonButtons = document.getElementById("simonButtons");
 
-    } if (anotherImage) {
-        anotherImage.style.display = 'none';
+    if (simonSays) simonSays.style.display = "none";
+    if (closeButton) closeButton.style.display = "none";
 
-    }
-    if (closeButton) {
-        closeButton.style.display = 'none';
-    }
-
-    if (doorButton) { 
-        doorButton.style.display = 'block'; doorButton.disabled = false; 
+    // Keep Simon buttons visible only if the puzzle isn't solved
+    if (!isPuzzleSolved) {
+        simonButtons.classList.add("simonButtonsHide");
     }
 }
 
+// Function to check if the door can be unlocked
 function checkDoor() {
-    const doorButton = document.getElementById('doorButton');
-
-    if (!leftButtonClicked) {
-        // If the left button hasn't been clicked
-        alert("The door is locked. You need to explore the area first.");
-    } else if (!isWireCutCorrectly) {
-        // If the correct wire hasn't been cut yet
-        alert("The door is locked by the power supply. Cut the correct wire first.");
+    if (!isPuzzleSolved) {
+        alert("The door is locked. Solve the puzzle to restore power first.");
     } else {
-        // If both conditions are satisfied
         alert("The door is now unlocked! Proceeding to the next level...");
         window.location.href = "nextLevel.html"; // Redirect to the next level
     }
 }
 
+// Function to go back to the home page
 function goHome() {
     const confirmExit = confirm("Are you sure you want to exit to the home page? Any unsaved progress will be lost.");
     if (confirmExit) {
