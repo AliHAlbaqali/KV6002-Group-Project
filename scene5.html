@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prison Cell Escape</title>
+    <link rel="stylesheet" href="prison.css">
+</head>
+
+<body>
+    <div id="gameContainer">
+        <!-- Timer in the top-left corner -->
+        <div id="timer">Time Remaining: <span id="time"></span></div>
+
+        <!-- Exit/Home button -->
+        <button id="homeButton" onclick="goHome()">Home</button>
+        <button id="hintButton">Get Hint</button>
+        <div id="hintPopup">
+            <p id="hintText"></p>
+            <button id="closeHint">Close</button>
+        </div>
+        <!-- Game Content -->
+    <div id="gameArea">
+        <img src="scene5.jpg" alt="scene5" id="gameImage">
+
+        <!-- Invisible buttons -->
+<!--        <button id="panelButton" onclick="openPanel()"></button>-->
+        <button id="leftButton" onclick="showAnotherImage()"></button>
+        <button id="doorButton" onclick="checkDoor()"></button> <!-- New Door Button -->
+
+        <!-- Hidden images -->
+        <img src="anagramcode.jpg" alt="anagram Panel" id="hiddenImage">
+        <img src="anagramcode.jpg" alt="Another View" id="anotherImage">
+
+      
+
+
+        <!-- Close button -->
+        <button id="closeButton" onclick="closeImage()">Close</button>
+    </div>
+
+        <!-- Level Description -->
+        <div id="levelDescription">
+            <p>You have almost escaped, crack the code to reach the escape pod!</p>
+        </div>
+    </div>
+
+    <script src="prison.js"></script>
+    <script src="gamelogic.js"></script>
+</body>
+</html>
