@@ -13,3 +13,17 @@ document.getElementById("startButton").addEventListener("click", function () {
         window.location.href = "information.html";
     });
 });
+
+function mockLeaderboard() {
+  const leaderboard = document.getElementById('leaderboard-entries');
+
+  // Add a new fake score
+  const newRow = document.createElement('tr');
+  newRow.innerHTML = `
+    <td>${leaderboard.children.length + 1}</td>
+    <td>FakePlayer${leaderboard.children.length + 1}</td>
+    <td>${Math.floor(Math.random() * 1000)}</td>
+  `;
+
+  leaderboard.appendChild(newRow);
+}
