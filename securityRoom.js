@@ -9,7 +9,7 @@ function openCamera() {
     const closeButton = document.getElementById('closeButton');
     const prevCamera = document.getElementById('prevCamera');
     const nextCamera = document.getElementById('nextCamera');
-    const clueButton = document.getElementById('paper'); // The clue button
+    const clueButton = document.getElementById('paper'); 
 
     if (!cameraImage) {
         console.error("cameraImage not found!");
@@ -17,20 +17,19 @@ function openCamera() {
     }
 
     camerasSeen = true;
-    cameraImage.src = cameraImages[cameraIndex]; // Set the first camera image
+    cameraImage.src = cameraImages[cameraIndex]; 
     cameraImage.style.display = 'block';
     closeButton.style.display = 'block';
 
     prevCamera.style.display = 'inline-block';
     nextCamera.style.display = 'inline-block';
 
-    // Show or hide clue button based on the camera being displayed
     toggleClueButton();
 }
 
 function changeCamera(direction) {
     const cameraImage = document.getElementById('cameraImage');
-    const clueButton = document.getElementById('paper'); // The clue button
+    const clueButton = document.getElementById('paper'); 
 
     if (direction === 'prev') {
         cameraIndex = (cameraIndex - 1 + cameraImages.length) % cameraImages.length;
@@ -40,7 +39,7 @@ function changeCamera(direction) {
 
     cameraImage.src = cameraImages[cameraIndex]; 
 
-    // Show or hide clue button based on the camera being displayed
+    
     toggleClueButton();
 }
 
@@ -48,9 +47,9 @@ function toggleClueButton() {
     const clueButton = document.getElementById('paper');
     const cameraImage = document.getElementById('cameraImage');
     if (cameraImages[cameraIndex] === "bar.png" && cameraImage.style.display === 'block') {
-        clueButton.style.display = 'block';  // Show the clue button when on "Bar" camera
+        clueButton.style.display = 'block';  
     } else {
-        clueButton.style.display = 'none';  // Hide the clue button for other cameras
+        clueButton.style.display = 'none';  
     }
 }
 

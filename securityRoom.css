@@ -229,7 +229,7 @@ body {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
-    z-index: 20; /* Make sure it's above other content */
+    z-index: 20; 
 }
 
 #closeButton {

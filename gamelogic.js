@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () =>
     const hintPopup = document.getElementById('hintPopup');
     const hintText = document.getElementById('hintText');
     const closeHint = document.getElementById('closeHint');
-    const targetPage = 'gameEnd.html'; 
+    const targetPage = 'gameOver.html'; 
 
     let remainingTime = localStorage.getItem('remainingTime') || 300; 
     remainingTime = Number(remainingTime);
