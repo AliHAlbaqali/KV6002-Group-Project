@@ -51,13 +51,10 @@ function checkDoor() {
     const doorButton = document.getElementById('doorButton');
     
     if (!leftButtonClicked) {
-        // If the left button hasn't been clicked
         alert("The door is locked. You need to explore the area first.");
     } else if (!isWireCutCorrectly) {
-        // If the correct wire hasn't been cut yet
         alert("The door is locked by the power supply. Cut the correct wire first.");
     } else {
-        // If both conditions are satisfied
         alert("The door is now unlocked! Proceeding to the next level...");
         window.location.href = "securityRoom.html"; // Redirect to the next level
     }

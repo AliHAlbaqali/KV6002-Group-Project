@@ -9,28 +9,23 @@
 
 <body>
     <div id="gameContainer">
-        <!-- Timer and Home button -->
         <div id="timer">Time Remaining: <span id="time"></span></div>
         <button id="homeButton" onclick="goHome()">Home</button>
 
-        <!-- Main Game Area (Landscape View) -->
         <div id="gameArea">
             <img src="escape pod room.png" alt="Escape Pod Room" id="gameImage">
 
-            <!-- Clickable Area on the Escape Pod -->
-            <div id="inputArea" onclick="openInputBox()"></div> <!-- This section will open the input box -->
-            <div id="inputArea2" onclick="openInputBox2()"></div> <!-- This section will open the input box -->
-            <div id="inputArea3" onclick="openInputBox3()"></div> <!-- This section will open the input box -->
+            <div id="inputArea" onclick="openInputBox()"></div>
+            <div id="inputArea2" onclick="openInputBox2()"></div>
+            <div id="inputArea3" onclick="openInputBox3()"></div> 
 
             
         </div>
     </div>
 
-    <!-- Input Box Popup (Hidden Initially) -->
     <div id="inputBox">
         <img src="escape pod star chart.png" alt="Code Puzzle Image" id="inputBoxImage">
         <div id="digitContainer">
-            <!-- 5 digit display sections -->
             <div class="digit" id="digit1" onclick="cycleSymbol('digit1')"><img src="symbol1.png" alt="Symbol 1"></div>
             <div class="digit" id="digit2" onclick="cycleSymbol('digit2')"><img src="symbol1.png" alt="Symbol 1"></div>
             <div class="digit" id="digit3" onclick="cycleSymbol('digit3')"><img src="symbol1.png" alt="Symbol 1"></div>
