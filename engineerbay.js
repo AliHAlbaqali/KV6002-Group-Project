@@ -2,7 +2,6 @@ let puzzleSequence = []; // To track the player's input sequence
 const correctPattern = ["red", "red", "green", "red", "blue", "blue"]; // Correct sequence
 let isPuzzleSolved = false; // Track if the puzzle is solved
 
-// Function to handle Simon Says panel opening
 function openPanel() {
     const simonSays = document.getElementById("simonSays");
     const closeButton = document.getElementById("closeButton");
@@ -19,7 +18,6 @@ function openPanel() {
     puzzleSequence = [];
 }
 
-// Function to handle button clicks on the Simon Says panel
 function handleSimonButtonClick(color) {
     puzzleSequence.push(color); // Add the clicked color to the sequence
     console.log(`Player clicked: ${color}, Current sequence: ${puzzleSequence.join(", ")}`);
@@ -44,7 +42,6 @@ function handleSimonButtonClick(color) {
     }
 }
 
-// Function to open the new box and show the image
 function openPanelCipher() {
     const newBoxImage = document.getElementById("simonButtonCipherImage");
     const newBoxCloseButton = document.getElementById("simonButtonCipherClose");
@@ -54,7 +51,6 @@ function openPanelCipher() {
     newBoxCloseButton.style.display = "block";
 }
 
-// Function to close the new box
 function closePanelCipher() {
     const newBoxImage = document.getElementById("simonButtonCipherImage");
     const newBoxCloseButton = document.getElementById("simonButtonCipherClose");
@@ -64,7 +60,6 @@ function closePanelCipher() {
     newBoxCloseButton.style.display = "none";
 }
 
-// Function to solve the Simon Says puzzle
 function solvePuzzle() {
     alert("Congratulations! You solved the puzzle. Power is restored.");
     isPuzzleSolved = true;
@@ -81,7 +76,6 @@ function solvePuzzle() {
     closeImage();
 }
 
-// Function to close any open images or puzzles
 function closeImage() {
     const simonSays = document.getElementById("simonSays");
     const closeButton = document.getElementById("closeButton");
@@ -96,17 +90,15 @@ function closeImage() {
     }
 }
 
-// Function to check if the door can be unlocked
 function checkDoor() {
     if (!isPuzzleSolved) {
         alert("The door is locked. Solve the puzzle to restore power first.");
     } else {
         alert("The door is now unlocked! Proceeding to the next level...");
-        window.location.href = "anagram.html"; // Redirect to the next level
+        window.location.href = "nextLevel.html"; // Redirect to the next level
     }
 }
 
-// Function to go back to the home page
 function goHome() {
     const confirmExit = confirm("Are you sure you want to exit to the home page? Any unsaved progress will be lost.");
     if (confirmExit) {
