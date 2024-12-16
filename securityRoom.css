@@ -112,7 +112,6 @@ body {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    border: 1px solid red; 
 }
 
 #doorButton {
@@ -122,22 +121,11 @@ body {
     width: 135px;
     height: 170px;
     background-color: transparent;
-    border: 2px solid #fff;
-    color: white;
-    font-size: 1.2rem;
+    border: none;
     cursor: pointer;
-    text-align: center;
     display: block;
     z-index: 10; 
-    border: 1px solid red; 
 }
-
-
-#doorButton:disabled {
-    background-color: gray;
-    cursor: not-allowed;
-}
-
 
 #drawerButton {
     position: absolute;
@@ -149,7 +137,6 @@ body {
     border: none;
     cursor: pointer;
     z-index: 10; 
-    border: 1px solid red; 
 }
 
 
@@ -250,8 +237,6 @@ body {
     position: absolute;
     z-index: 100;
     padding: 35px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 2px solid white;
     cursor: pointer;
     display: none;
     top: 70%;

@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', () =>
     const hints =
      {
         'prison.html': "Click on every button available. Don't be afraid to use a calculator!",
+        'securityRoom.html': "There has to be a way to unlock that drawer. Could you have overlooked something?",
+        'engineeringBay.html': "You have all the information you need! Connect it together and you'll figure it out!",
+        'cargohold.html': "There must be something to find here; Sort it all out and you'll have your answer",
+        'scene5.html': "",
+        'escapePod.html': "There has to be a correct configuration to this code! Is there anything in this room that shows you?",
     };
 
     const currentPage = window.location.pathname.split('/').pop();

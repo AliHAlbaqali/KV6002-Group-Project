@@ -9,42 +9,36 @@
 
 <body>
     <div id="gameContainer">
-        <!-- Timer in the top-left corner -->
+
         <div id="timer">Time Remaining: <span id="time"></span></div>
 
-        <!-- Exit/Home button -->
         <button id="homeButton" onclick="goHome()">Home</button>
         <button id="hintButton">Get Hint</button>
         <div id="hintPopup">
             <p id="hintText"></p>
             <button id="closeHint">Close</button>
         </div>
-        <!-- Game Content -->
+
     <div id="gameArea">
         <img src="prison1.jpg" alt="Prison Cell" id="gameImage">
 
-        <!-- Invisible buttons -->
         <button id="panelButton" onclick="openPanel()"></button>
         <button id="leftButton" onclick="showAnotherImage()"></button>
-        <button id="doorButton" onclick="checkDoor()"></button> <!-- New Door Button -->
+        <button id="doorButton" onclick="checkDoor()"></button> 
 
-        <!-- Hidden images -->
         <img src="wires2.jpg" alt="Wires Panel" id="hiddenImage">
         <img src="wall1.jpg" alt="Another View" id="anotherImage">
 
-       <!-- Wire Buttons -->
         <button id="wireBlue" class="wireButton" onclick="cutWire('blue')"></button>
         <button id="wireRed" class="wireButton" onclick="cutWire('red')"></button>
         <button id="wireYellow" class="wireButton" onclick="cutWire('yellow')"></button>
 
 
-        <!-- Close button -->
         <button id="closeButton" onclick="closeImage()">Close</button>
     </div>
 
-        <!-- Level Description -->
         <div id="levelDescription">
-            <p>You are trapped in a prison cell. Open the panel and cut the power wire to disable the laser gate and escape.</p>
+            <p>You are trapped in a prison cell. The prison gate is made of lasers... Maybe there is a way to disable them?</p>
         </div>
     </div>
 
