@@ -59,7 +59,7 @@ function checkDoor() {
     } else {
         // If both conditions are satisfied
         alert("The door is now unlocked! Proceeding to the next level...");
-        window.location.href = "nextLevel.html"; // Redirect to the next level
+        window.location.href = "securityRoom.html"; // Redirect to the next level
     }
 }
 
