@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargo Hold</title>
+    <link rel="stylesheet" href="cargohold.css">
+</head>
+
+<body>
+    <div id="gameContainer">
+        <!-- Timer in the top-left corner -->
+        <div id="timer">Time Remaining: <span id="time"></span></div>
+
+        <!-- Exit/Home button -->
+        <button id="homeButton" onclick="goHome()">Home</button>
+
+        <!-- Game Content -->
+        <div id="gameArea">
+            <img src="cargohold.jpeg" alt="engineering bay" id="gameImage">
+
+            <!-- Draggable Images -->
+            <img src="largercrate.png" alt="Item 1" class="draggable" draggable="true" id="item1" style="top: 20%; left: 10%;">
+            <img src="plier.png" alt="Item 2" class="draggable" draggable="true" id="item2" style="top: 70%; left: 60%;">
+
+            <!-- Drop Zones -->
+            <div class="dropzone" id="zone1" style="top: 50%; left: 65%;"></div>
+            <div class="dropzone" id="zone2" style="top: 40%; left: 22%;"></div>
+
+            <button id="doorButton" onclick="checkDoor()"></button> <!-- New Door Button -->
+        </div>
+
+        <!-- Level Description -->
+        <div id="levelDescription">
+            <p>You've reached the Cargo hold, but its gravity generator has broken! Return the floating items back to their original places.</p>
+        </div>
+    </div>
+
+    <script src="gamelogic.js"></script>
+    <script src="cargohold.js"></script>
+</body>
+</html>
