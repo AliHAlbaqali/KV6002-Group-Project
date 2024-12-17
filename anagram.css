@@ -1,0 +1,250 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111; /* Dark theme background */
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Main container for the game */
+#gameContainer {
+    position: relative;
+    width: 60%;
+    height: 80%;
+    max-width: 800px; /* Fixed size for the game container */
+    border: 3px solid #555; /* Border for the game area */
+    border-radius: 10px;
+    background-color: #222; /* Slightly lighter background inside the container */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Timer in the top-left corner */
+#timer {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 1.2rem;
+    color: lightgreen; /* Matches the theme for a glowing timer */
+}
+
+/* Home button styling */
+#homeButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #ff4c4c; /* Red button for Home */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 15;
+    transition: background-color 0.3s ease;
+}
+
+#homeButton:hover {
+    background-color: #ff0000; /* Brighter red on hover */
+}
+
+/* Game area styling */
+#gameArea {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Room background image */
+#gameImage {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+    object-fit: cover; /* Ensures the image fills the container neatly */
+}
+
+/* Invisible buttons */
+#panelButton, #leftButton {
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Panel button */
+#panelButton {
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    width: 150px;
+    height: 100px;
+    background-color: transparent;
+    border: none; /* Remove borders */
+    outline: none; /* Remove focus outlines */
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Left button */
+#leftButton {
+    position: absolute;
+    top: 42%;
+    left: 18%;
+    width: 65px;
+    height: 80px;
+    background-color: transparent;
+    border: none; /* Remove borders */
+    outline: none; /* Remove focus outlines */
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Hidden anagram image styling */
+#anagramImage {
+    display: none; /* Hidden initially */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+    border: 3px solid #555; /* Matches the theme */
+    border-radius: 5px;
+    z-index: 15;
+}
+
+/* Close button styling */
+#closeButton {
+    display: none; /* Hidden initially */
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#closeButton:hover {
+    background-color: darkred;
+}
+
+/* Input box container styling */
+#inputBoxContainer {
+    display: none; /* Hidden initially */
+    margin-top: 20px;
+    text-align: center;
+}
+
+#inputBox {
+    padding: 10px;
+    font-size: 1rem;
+    width: 60%;
+    max-width: 300px;
+    border: 2px solid #555;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+}
+
+#submitButton {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submitButton:hover {
+    background-color: #45a049;
+}
+
+#feedbackMessage {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: red; /* Initially red for errors */
+}
+
+/* Level description styling */
+#levelDescription {
+    padding: 10px;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 2px solid #555;
+}
+
+/* Door button */
+#doorButton {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 160px;
+    height: 160px;
+    background-color: transparent;
+    border: none; /* Remove borders */
+    outline: none; /* Remove focus outlines */
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Timer in the top-left corner */
+#timerDisplay {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 1.2rem;
+    color: lightgreen;
+}
+
+#hintPopup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+}
+
+#hintText {
+    font-size: 16px;
+    color: black; /* Ensure the text color is visible */
+    margin-bottom: 20px;
+}
+
+#closeHint {
+    background: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#closeHint:hover {
+    background: #333;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 5 - Anagram Puzzle</title>
+    <link rel="stylesheet" href="anagram.css">
+</head>
+<body>
+    <div id="gameContainer">
+
+        <!-- Timer in the top-left corner -->
+        <div id="timer">Time Remaining: <span id="time"></span></div>
+
+        <!-- Exit/Home button -->
+        <button id="homeButton" onclick="goHome()">Home</button>
+        <button id="hintButton">Get Hint</button>
+        <div id="hintPopup">
+            <p id="hintText"></p>
+            <button id="closeHint">Close</button>
+        </div>
+
+        <!-- Game Content -->
+        <div id="gameArea">
+            <img src="scene5.jpg" alt="Room Scene" id="gameImage">
+        
+            <!-- Left Button for Viewing Anagrams -->
+            <button id="leftButton" onclick="showAnagramImage()"></button>
+
+            <button id="panelButton" onclick="openInputBox()"></button>
+        
+            <!-- Door Button -->
+            <button id="doorButton" onclick="checkDoor()"></button>
+        
+            <!-- Hidden Anagram Image -->
+            <img src="anagramcode.jpg" alt="Anagram Clues" id="anagramImage">
+        
+            <!-- Close Button -->
+            <button id="closeButton" onclick="closeImage()">Close</button>
+        </div>
+        
+        <!-- Level Description -->
+        <div id="levelDescription">
+            <p>You find yourself presented with a door and a keypad, how may you escape this?</p>
+        </div>
+
+    </div>
+
+    <script src="anagram.js"></script>
+</body>
+</html>
