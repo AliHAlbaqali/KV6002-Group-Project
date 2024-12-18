@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () =>
     const closeHint = document.getElementById('closeHint');
     const targetPage = 'gameOver.html'; 
 
-    let remainingTime = localStorage.getItem('remainingTime') || 300; 
+    let remainingTime = localStorage.getItem('remainingTime') || 350; 
     remainingTime = Number(remainingTime);
 
     const hints =
