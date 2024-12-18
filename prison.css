@@ -11,6 +11,15 @@ body {
     overflow: hidden;
 }
 
+/* Timer in the top-left corner */
+#timer {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 1.2rem;
+    color: lightgreen;
+}
+
 /* Main container for the game */
 #gameContainer {
     position: relative;
@@ -119,7 +128,6 @@ body {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    border: 1px solid red; /* Remove after alignment */
 }
 
 .wireButton {
@@ -129,7 +137,6 @@ body {
     cursor: pointer;
     display: none; /* Hidden by default */
     z-index: 20; /* Ensure it's on top of the wire image */
-    border: 1px solid red; /* Remove after alignment */
 }
 
 /* Positioning for individual wires */
@@ -162,14 +169,12 @@ body {
     width: 135px;
     height: 170px;
     background-color: transparent;
-    border: 2px solid #fff;
-    color: white;
+    border: none;
     font-size: 1.2rem;
     cursor: pointer;
     text-align: center;
     display: block;
     z-index: 10; /* Ensure it's clickable */
-    border: 1px solid red; /* Remove after alignment */
 }
 
 /* Door locked message styling */
@@ -189,7 +194,6 @@ body {
     border: none;
     cursor: pointer;
     z-index: 10; /* Ensure it's clickable */
-    border: 1px solid red; /* Remove after alignment */
 }
 
 /* Hide images initially */
