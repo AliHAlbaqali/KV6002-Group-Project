@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () =>
      {
         'prison.html': "Click on every button available. Don't be afraid to use a calculator!",
         'securityRoom.html': "There has to be a way to unlock that drawer. Could you have overlooked something?",
-        'engineeringBay.html': "You have all the information you need! Connect it together and you'll figure it out!",
+        'engineerBay.html': "You have all the information you need! Connect it together and you'll figure it out!",
         'cargohold.html': "The hint here is simpler than you think!",
         'anagram.html': "It's simpler than you think! How would you unlock a door with this code...",
         'escapePod.html': "There has to be a correct configuration to this code! Is there anything in this room that shows you?",
