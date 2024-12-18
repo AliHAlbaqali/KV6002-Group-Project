@@ -95,7 +95,7 @@ function checkDoor() {
         alert("The door is locked. Solve the puzzle to restore power first.");
     } else {
         alert("The door is now unlocked! Proceeding to the next level...");
-        window.location.href = "nextLevel.html"; // Redirect to the next level
+        window.location.href = "cargohold.html"; // Redirect to the next level
     }
 }
 

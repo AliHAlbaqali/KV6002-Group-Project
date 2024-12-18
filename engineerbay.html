@@ -9,11 +9,14 @@
 
 <body>
     <div id="gameContainer">
-
+        <!-- Timer in the top-left corner -->
         <div id="timer">Time Remaining: <span id="time"></span></div>
 
+        <!-- Exit/Home button -->
         <button id="homeButton" onclick="goHome()">Home</button>
         
+
+    <!-- Game Content -->
     <div id="gameArea">
         <img src="engineerbay.jpg" alt="engineering bay" id="gameImage">
 
@@ -32,13 +35,15 @@
             <button class="simonButton" id="yellowButton" onclick="handleSimonButtonClick('yellow')"></button>
         </div>
         
+        <!-- Close button -->
         <button id="closeButton" onclick="closeImage()">Close</button>
 
-        <button id="doorButton" onclick="checkDoor()"></button> 
+        <button id="doorButton" onclick="checkDoor()"></button> <!-- New Door Button -->
     </div>
 
+        <!-- Level Description -->
         <div id="levelDescription">
-            <p>You've reached the Engineering Bay, but it seems to be running low on power! Could there be a way to restore power?</p>
+            <p>You've reached the Engineering Bay, but it's running on backup power! Restore the main power to proceed.</p>
         </div>
     </div>
 

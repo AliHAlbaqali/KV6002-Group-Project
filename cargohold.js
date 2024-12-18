@@ -1,4 +1,5 @@
-const isPuzzleSolved = false;
+let isPuzzleSolved = false;
+let correctCount = 0; // Counter to track correctly placed items
 
 // Select draggable items and drop zones
 const draggables = document.querySelectorAll('.draggable');
@@ -37,6 +38,15 @@ dropzones.forEach((zone, index) => {
             // Disable further dragging for the item
             draggable.setAttribute('draggable', 'false');
             draggable.classList.remove('dragging');
+
+            // Increment the correct count
+            correctCount++;
+
+            // Check if the puzzle is solved
+            if (correctCount === draggables.length) {
+                isPuzzleSolved = true;
+                alert("Puzzle solved! The door is now unlocked.");
+            }
         } else {
             alert('Wrong spot! Try again.');
         }
