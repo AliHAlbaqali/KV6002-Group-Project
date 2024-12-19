@@ -132,10 +132,10 @@ body {
 
 #drawerButton {
     position: absolute;
-    left: 18%; 
-    top: 75%; 
-    width: 65px; 
-    height: 50px;
+    left: 13%; 
+    top: 68%; 
+    width: 100px; 
+    height: 80px;
     background-color: transparent;
     border: none;
     cursor: pointer;
